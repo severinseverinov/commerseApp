@@ -1,27 +1,65 @@
-# CommerseApp
+# e-commerseApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+#### Languages and Tools:
 
-## Development server
+> Angular, javascript, typscript, nodejs, html5, css, bootstrap v5
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### About:
 
-## Code scaffolding
+> e-commerceApp is  Patika-Orion Innovation Turkey Angular Bootcamp last project. I try to make an online shopping app. There are two different user profile as admin and user. Admins can change, del, edit product and add new products. Users can see and buy products.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Pictures
 
-## Build
+1. Register
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ![Register](.\projectImages\Signup.jpg)
 
-## Running unit tests
+2. User login
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![userLogin](.\projectImages\userLogin.jpg)
 
-## Running end-to-end tests
+3. Admin Login
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ![adminLogin](.\projectImages\adminLogin.jpg)
 
-## Further help
+4. Admin Panel
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ![adminpanel](.\projectImages\adminPanel2.jpg)
+
+5. New Product
+
+   ![newProduct](.\projectImages\newProduct.jpg)
+
+6. Edit Product
+
+   ![editProduct](.\projectImages\adminEdit.jpg)
+
+7. Main Page
+
+   ![main1](.\projectImages\main1.jpg)
+
+![main2](.\projectImages\main2.jpg)
+
+8. Product
+![product](.\projectImages\product.jpg)
+
+9. Cart
+
+![cart](.\projectImages\cart.jpg)
+
+10. Buy
+
+![buy](.\projectImages\buy.jpg)
+
+#### Packages And Modules
+
+> ModelModule, RouterModule, HttpClientModule, FormsModule, ReactiveFormsModule, BrowserModule, AuthGuard, Font Awesome, Bootstrap 5, json-server
+
+#### Requirements
+
+> Codding Editor, Angular Framwork (v13), Bootstrap (v5), npm, yarn, json-server username:admin password:1234
+
+#### Contact
+
+> severinseverinov@hotmail.com
+

@@ -1,0 +1,94 @@
+<!-- navbar komponenti -->
+<app-navbar></app-navbar>
+
+<!-- adres ve sipariş formu ve kayıt metodları -->
+<div class="container pt-3 mb-5">
+  <div *ngIf="orderSent" class="m-2 text-center">
+        <h4>Order saved!</h4>
+        <h6>Thank you for choose us and see you then.</h6>
+        <button (click)="gotoMain()" routerLinkActive="router-link-active"  class="btn btn-primary">Back to main page</button>
+  </div>
+
+  <!-- signup formu -->
+  <form *ngIf="!orderSent" [formGroup]="orderForm" (ngSubmit)="buyNow()">
+
+    <div class="mb-3">
+      <label for="firstname" class="form-label">First Name</label>
+      <input autocomplete="off" formControlName="firstname" type="text" class="form-control" id="firstname">
+      <!-- input içerisi hata yakalama işlemi -->
+      <span class="error"
+      *ngIf="orderForm.get('firstname') && !orderForm.get('firstname')!.valid && orderForm.get('firstname')!.touched"
+      >Firsname is required</span>
+    </div>
+    <div class="mb-3">
+      <label for="lastname" class="form-label">Last Name</label>
+      <input autocomplete="off" formControlName="lastname" type="text" class="form-control" id="lastname">
+      <!-- input içerisi hata yakalama işlemi -->
+      <span class="error"
+      *ngIf="orderForm.get('lastname') && !orderForm.get('lastname')!.valid && orderForm.get('lastname')!.touched"
+      >Lastname is required</span>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input autocomplete="off" formControlName="phone" type="number" class="form-control" id="phone">
+      <!-- input içerisi hata yakalama işlemi -->
+      <span class="error"
+      *ngIf="orderForm.get('phone') && !orderForm.get('phone')!.valid && orderForm.get('phone')!.touched"
+      >Phone number is required</span>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input autocomplete="off" formControlName="email" type="email" class="form-control" id="email">
+      <!-- input içerisi hata yakalama işlemi -->
+      <span class="error"
+      *ngIf="orderForm.get('email') && !orderForm.get('email')!.valid && orderForm.get('email')!.touched"
+      >Email is not correct</span>
+    </div>
+
+    <div class="mb-3">
+      <label for="address" class="form-label">Address</label>
+      <input autocomplete="off" formControlName="address" type="text" class="form-control" id="address">
+      <!-- input içerisi hata yakalama işlemi -->
+      <span class="error"
+      *ngIf="orderForm.get('address') && !orderForm.get('address')!.valid && orderForm.get('address')!.touched"
+      >Address is required</span>
+    </div>
+
+    <div class="mb-3">
+      <label for="city" class="form-label">City</label>
+      <input autocomplete="off" formControlName="city" type="text" class="form-control" id="city">
+      <!-- input içerisi hata yakalama işlemi -->
+      <span class="error"
+      *ngIf="orderForm.get('city') && !orderForm.get('city')!.valid && orderForm.get('city')!.touched"
+      >City is required</span>
+    </div>
+
+
+    <div class="text-center">
+    <button type="submit" class="btn btn-primary me-3">Buy Now!</button>
+    <button (click)="gotoMain()" routerLinkActive="router-link-active"  class="btn btn-primary">Back to main page</button>
+  </div>
+
+  </form>
+
+</div>
+
+<!-- footer -->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top end-0">
+    <p class="col-md-4 mb-0 text-muted">© 2022 Online Mall, Inc</p>
+
+    <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="../assets/siteImgs/onlineMall.png" alt="Online Mall" srcset="" style="" >
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
+</div>

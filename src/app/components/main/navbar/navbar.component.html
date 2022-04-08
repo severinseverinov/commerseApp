@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light top-fixed">
+  <div class="container-fluid p-2 m-2 ps-5">
+    <img src="../assets/siteImgs/onlineMall.png" alt="Online Mall" srcset="" style="margin-right:20px;" (click)="gotoMain()">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" (click)="gotoMain()" style="cursor:pointer;" >Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/admin" style="cursor:pointer;">
+            Admin Panel
+          </a>
+
+        </li>
+      </ul>
+
+      <ng-container *ngIf="isMain">
+        <form class="d-flex" style="width: 40%;">
+          <input class="form-control ms-2"  type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </ng-container>
+
+      <ul class="navbar-nav ms-auto  mb-2 pe-5 mb-lg-0">
+        <li class="nav-item">
+          <a (click)="gotoCart()" style="cursor:pointer;" class="nav-link active"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <a  (click)="signOut()" style="cursor:pointer;" href="#" class="nav-link active" style="cursor:pointer;">Sign out</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+

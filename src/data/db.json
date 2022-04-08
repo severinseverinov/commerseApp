@@ -1,0 +1,368 @@
+{
+  "signupUsers": [
+    {
+      "username": "asda",
+      "firstname": "asdasd",
+      "lastname": "asdasdasd",
+      "phone": "123123123123123",
+      "address": "alskdfşlaksdfjşaslkdf  şaksdjnfşljkasdnfş",
+      "city": "Kırklareli",
+      "genre": "male",
+      "email": "elif_sbt@hotmail.com",
+      "password": "qweqweqwe",
+      "id": 1,
+      "token": ""
+    },
+    {
+      "username": "dfgsd",
+      "firstname": "dfg",
+      "lastname": null,
+      "phone": null,
+      "genre": null,
+      "email": null,
+      "password": null,
+      "id": 2,
+      "token": ""
+    },
+    {
+      "username": "severin",
+      "firstname": "sevgin",
+      "lastname": "serbest",
+      "phone": 5220220202,
+      "genre": "male",
+      "email": "sevgin.ss@gmail.com",
+      "password": "admin",
+      "id": 3,
+      "token": ""
+    },
+    {
+      "username": "asd",
+      "firstname": "adaasd",
+      "lastname": "asdad",
+      "phone": 545456,
+      "genre": "male",
+      "email": "asdasd@asda.com",
+      "password": "123456789",
+      "id": 4
+    },
+    {
+      "username": "sevgin",
+      "firstname": "Sevgin",
+      "lastname": "SERBEST",
+      "phone": 5538615600,
+      "genre": "male",
+      "email": "sevgin.ss@gmail.com",
+      "password": "1234",
+      "id": 5
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "category": "electronics"
+    },
+    {
+      "id": 2,
+      "category": "jewelery"
+    },
+    {
+      "id": 3,
+      "category": "fasion"
+    }
+  ],
+  "products": [
+    {
+      "title": "Fjallravennnn",
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "price": 109.95,
+      "image": "https://productimages.hepsiburada.net/l/46/600-800/10860345327666.jpg",
+      "category": "fasion",
+      "id": 17
+    },
+    {
+      "title": "HP 15-DA2033NT ",
+      "description": "Intel Core i5 10210U 4GB 256GB SSD Windows 10 Home 15.6\" Taşınabilir Bilgisayar 9HN16EA",
+      "price": 6.979,
+      "image": "https://productimages.hepsiburada.net/s/188/550/110000153344257.jpg/format:webp",
+      "category": "electronics",
+      "productId": 318574,
+      "id": 18
+    },
+    {
+      "title": "Tektaş Yüzük",
+      "description": "Altınbaş Altın Tektaş Yüzük",
+      "price": 2.355,
+      "image": "https://productimages.hepsiburada.net/s/94/550/110000037385021.jpg/format:webp",
+      "category": "jewelery",
+      "productId": 418574,
+      "id": 19
+    }
+  ],
+  "soldProducts": [
+    [
+      {
+        "id": 3,
+        "productId": 318574,
+        "title": "White Gold Plated Princess",
+        "price": 9.99,
+        "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+        "category": "jewelery",
+        "image": "https://productimages.hepsiburada.net/s/113/500/110000060669518.jpg",
+        "rating": {
+          "rate": 2,
+          "count": 400
+        },
+        "quantity": 1,
+        "total": 9.99
+      }
+    ],
+    [
+      {
+        "id": 3,
+        "productId": 318574,
+        "title": "White Gold Plated Princess",
+        "price": 9.99,
+        "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+        "category": "jewelery",
+        "image": "https://productimages.hepsiburada.net/s/113/500/110000060669518.jpg",
+        "rating": {
+          "rate": 2,
+          "count": 400
+        },
+        "quantity": 1,
+        "total": 9.99
+      }
+    ],
+    [
+      {
+        "id": 3,
+        "productId": 318574,
+        "title": "White Gold Plated Princess",
+        "price": 9.99,
+        "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+        "category": "jewelery",
+        "image": "https://productimages.hepsiburada.net/s/113/500/110000060669518.jpg",
+        "rating": {
+          "rate": 2,
+          "count": 400
+        },
+        "quantity": 1,
+        "total": 9.99
+      }
+    ],
+    {
+      "firstname": "asdads",
+      "lastname": "asdasdasd",
+      "phone": 5454545545,
+      "email": "sevgin.ss@gmail.com",
+      "id": 2
+    },
+    {
+      "firstname": "Sevgin",
+      "lastname": "SERBEST",
+      "phone": 5538615600,
+      "email": "sevgin.ss@gmail.com",
+      "address": "Pektas sk No:3-5 Koru apt",
+      "city": "Luleburgaz",
+      "zip": {
+        "cart": {
+          "items": [
+            {
+              "product": {
+                "id": 2,
+                "productId": 218574,
+                "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+                "price": 64,
+                "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+                "category": "electronics",
+                "image": "https://productimages.hepsiburada.net/s/19/500/9845408596018.jpg",
+                "rating": {
+                  "rate": 3,
+                  "count": 203
+                }
+              },
+              "quentity": "2"
+            }
+          ],
+          "itemAmount": "02",
+          "total": 128
+        },
+        "isSent": false
+      },
+      "id": 3
+    },
+    {
+      "firstname": "Sevgin",
+      "lastname": "SERBEST",
+      "phone": 5538615600,
+      "email": null,
+      "address": "Pektas sk No:3-5 Koru apt",
+      "city": "Luleburgaz",
+      "zip": {
+        "cart": {
+          "items": [
+            {
+              "product": {
+                "id": 4,
+                "productId": 418574,
+                "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+                "price": 29.95,
+                "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+                "category": "fasion",
+                "image": "https://productimages.hepsiburada.net/l/22/1000/9972546338866.jpg",
+                "rating": {
+                  "rate": 1,
+                  "count": 340
+                }
+              },
+              "quentity": 1
+            }
+          ],
+          "itemAmount": 1,
+          "total": 29.95
+        },
+        "isSent": false
+      },
+      "id": 4
+    },
+    {
+      "firstname": "Sevgin",
+      "lastname": "SERBEST",
+      "phone": 5538615600,
+      "email": "sdsdfsdfsdf@ads.adas",
+      "address": "Pektas sk No:3-5 Koru apt, Kat:2 Daire:5",
+      "city": "Luleburgaz",
+      "zip": {
+        "cart": {
+          "items": [
+            {
+              "product": {
+                "title": "HP 15-DA2033NT ",
+                "description": "Intel Core i5 10210U 4GB 256GB SSD Windows 10 Home 15.6\" Taşınabilir Bilgisayar 9HN16EA",
+                "price": 6.979,
+                "image": "https://productimages.hepsiburada.net/s/188/550/110000153344257.jpg/format:webp",
+                "category": "electronics",
+                "productId": 318574,
+                "id": 18
+              },
+              "quentity": 1
+            }
+          ],
+          "itemAmount": 1,
+          "total": 6.979
+        },
+        "isSent": false
+      },
+      "id": 5
+    },
+    {
+      "firstname": "Sevgin",
+      "lastname": "SERBEST",
+      "phone": "5538615600",
+      "email": "sevgin.ss@gmail.com",
+      "address": "Lüleburgaz",
+      "city": "Kırklareli",
+      "zip": {
+        "cart": {
+          "items": [
+            {
+              "product": {
+                "title": "Tektaş Yüzük",
+                "description": "Altınbaş Altın Tektaş Yüzük",
+                "price": 2.355,
+                "image": "https://productimages.hepsiburada.net/s/94/550/110000037385021.jpg/format:webp",
+                "category": "jewelery",
+                "productId": 418574,
+                "id": 19
+              },
+              "quentity": 1
+            },
+            {
+              "product": {
+                "title": "HP 15-DA2033NT ",
+                "description": "Intel Core i5 10210U 4GB 256GB SSD Windows 10 Home 15.6\" Taşınabilir Bilgisayar 9HN16EA",
+                "price": 6.979,
+                "image": "https://productimages.hepsiburada.net/s/188/550/110000153344257.jpg/format:webp",
+                "category": "electronics",
+                "productId": 318574,
+                "id": 18
+              },
+              "quentity": 1
+            }
+          ],
+          "itemAmount": 2,
+          "total": 9.334
+        },
+        "isSent": false
+      },
+      "id": 6
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "porductId": 318574,
+      "postTitle": "Good",
+      "post": "Good product",
+      "rate": 1
+    },
+    {
+      "id": 2,
+      "porductId": 118574,
+      "postTitle": "Very good",
+      "post": "Very Good product",
+      "rate": 2
+    },
+    {
+      "id": 3,
+      "porductId": 418574,
+      "postTitle": "Excellent good",
+      "post": "Excellent Good product",
+      "rate": 3
+    },
+    {
+      "id": 4,
+      "porductId": 218574,
+      "postTitle": "Beutiful good",
+      "post": "Beutiful Good product",
+      "rate": 4
+    },
+    {
+      "id": 5,
+      "porductId": 318574,
+      "postTitle": "Good",
+      "post": "Good product",
+      "rate": 1
+    },
+    {
+      "id": 6,
+      "porductId": 118574,
+      "postTitle": "Very good",
+      "post": "Very Good product",
+      "rate": 2
+    },
+    {
+      "id": 7,
+      "porductId": 418574,
+      "postTitle": "Excellent good",
+      "post": "Excellent Good product",
+      "rate": 3
+    },
+    {
+      "id": 8,
+      "porductId": 218574,
+      "postTitle": "Beutiful good",
+      "post": "Beutiful Good product",
+      "rate": 4
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "1234",
+      "main": "admin@admin.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+    }
+  ]
+}

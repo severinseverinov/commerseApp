@@ -1,0 +1,75 @@
+<!-- navbar komponent -->
+<app-navbar></app-navbar>
+
+<!-- sepet içerisinde ürün varsa kullanılacak template -->
+<ng-container *ngIf="cart.itemAmount !=0">
+  <div class="container">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of cart.items; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.product.title}}</td>
+                        <td><img style="width: 120px;" src="{{item.product.image}}" alt=""></td>
+                        <td style="width: 240px;">{{item.product.description}}</td>
+                        <th style="width: 120px;">{{item.product.price}}<li class="fas fa-turkish-lira-sign ps-1"></li></th>
+                        <td style="width: 120px;"><input  type="text" class="form-contol" [value]="item.quentity" (change)="cart.updateQuentity(item.product,$any($event.target).value)"></td>
+                        <td style="width: 120;">{{item.product.price*item.quentity}}<li class="fas fa-turkish-lira-sign ps-1"></li></td>
+                        <td>
+                            <button (click)="cart.removeItem(item.product.id)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td><button (click)="cart.clearCart()" class="btn btn-danger">Empty</button></td>
+                        <td><button (click)="gotoMain()" class="btn btn-primary">Shop</button></td>
+                        <td><button (click)="gotoBuy()" class="btn btn-success">Buy</button></td>
+                        <td><strong>Total Count: {{cart.total}} <li class="fas fa-turkish-lira-sign ps-1"></li></strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</ng-container>
+
+<!-- sepet içerisinde ürün yoksa kullanılacak template -->
+<ng-container *ngIf="cart.itemAmount == 0">
+<div class="container mt-5">
+        <h4>Your basket is empty!</h4>
+        <h6>Add item to it now</h6>
+        <button (click)="gotoMain()" routerLinkActive="router-link-active"  class="btn btn-primary">Shop Now</button>
+</div>
+</ng-container>
+
+<!-- footer -->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">© 2022 Online Mall, Inc</p>
+
+    <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="../assets/siteImgs/onlineMall.png" alt="Online Mall" srcset="" style="" >
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
+</div>

@@ -1,0 +1,260 @@
+<!-- navigasyon barı -->
+<app-navbar></app-navbar>
+
+<!-- Kullanıcı girişi yapılması ise ürünler kullanıcıya gösterilmez. -->
+<div class="container" *ngIf="isLogin">
+
+<!-- Görüntüleme tipi butonları butonları -->
+<div class="container" >
+  <div class="col-12 mt-3">
+
+    <div class="d-grid gap-3 d-sm-flex justify-content-md-end pe-2">
+
+      <button class="btn btn-outline-primary " (click)="showList()" type="button"><i class="fa fa-bars"></i></button>
+      <button class="btn btn-outline-primary" (click)="showBlock()" type="button"><i class="fa-solid fa-border-all"></i></button>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3 mb-5">
+
+  <!-- Categories Container -->
+  <div class="row">
+    <div class="col-3">
+    <div class="list-group">
+      <button  (click)="selectCategory()" class="list-group-item list-group-item-action">All Categories</button>
+      <button *ngFor="let cat of categories" (click)="selectCategory(cat)" class="list-group-item list-group-item-action"  [class.active]="cat==selectedCtg">{{cat.category | titlecase}}</button>
+    </div>
+  </div>
+
+  <!-- ürünlerin block şeklinde listelenmesi -->
+
+  <ng-container *ngIf="!isList">
+  <div class="col-9">
+    <div class="row">
+     <ng-container *ngFor="let prd of products">
+        <div class="col-md-4">
+          <div class="card mb-4" style="width: 19rem;">
+            <img (click)="titleClick(prd)"  src="{{prd.image}}" class="card-img-top mt-3" style="height: 300px;" alt="{{prd.title}}">
+            <div class="card-body">
+              <h5 (click)="titleClick(prd)" class="card-title" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{prd.title}}</h5>
+              <p (click)="titleClick(prd)"  class="card-text" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{prd.description}}</p>
+            </div>
+            <ul class="text-muted" style="margin-left:--10px;">
+              Price: {{prd.price}}<li class="fas fa-turkish-lira-sign ps-1"></li>
+            </ul>
+            <div class="card-body text-center">
+              <button (click)="addToChart(prd)" id="liveToastBtn" class="btn btn-outline-primary" >Add <i class="fa-solid fa-cart-plus"></i></button>
+
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="row mt-3">
+      <div class="col text-center">
+        <div class="btn-group">
+          <button
+          *ngFor="let page of Pages"
+          (click)="changeSelectedPage(page)"
+          class="btn btn-outline-primary"
+          [class.active]="page==selectedPage"
+          >{{page}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </ng-container>
+
+  <!-- ürünlerin liste biçiminde listelenmesi -->
+  <ng-container *ngIf="isList">
+  <div  class="col-9">
+    <ng-container *ngFor="let prd of products">
+      <div class="card mb-3 pt-2" style="max-width: 1200px;">
+        <div class="row g-0">
+          <div class="col-md-4 text-center">
+            <img (click)="titleClick(prd)"  src="{{prd.image}}" style="height:200px;" class="img-fluid rounded-start" alt="{{prd.title}}">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 (click)="titleClick(prd)"  class="card-title">{{prd.title}}</h5>
+              <p (click)="titleClick(prd)"  class="card-text" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{prd.description}}</p>
+              <ul  class="text-muted" style="margin-left:--10px;">
+                Price: {{prd.price}}<li class="fas fa-turkish-lira-sign ps-1"></li><br/><br/>
+                <button (click)="addToChart(prd)" class="btn btn-outline-primary">Add <i class="fa-solid fa-cart-plus"></i></button>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <div class="row mt-3">
+      <div class="col text-center">
+        <div class="btn-group">
+          <button
+          *ngFor="let page of Pages"
+          (click)="changeSelectedPage(page)"
+          class="btn btn-outline-primary"
+          [class.active]="page==selectedPage"
+          >{{page}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+</div>
+
+</div>
+<!-- footer -->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top end-0">
+    <p class="col-md-4 mb-0 text-muted">© 2022 Online Mall, Inc</p>
+
+    <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="../assets/siteImgs/onlineMall.png" alt="Online Mall" srcset="" style="" >
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
+</div>
+</div>
+
+<!-- Kullanıcı giriş yada kayıt ekranı -->
+<div class="container" *ngIf="!isLogin">
+
+  <!-- login sayfası-->
+  <div class="container" *ngIf="!isSignUp">
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="temp">
+          <div class="text-center">
+            <h3 class="strong">Log in</h3>
+          </div>
+          <!-- login formu -->
+          <form [formGroup]="loginForm" (ngSubmit)="loginUp()">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input formControlName="username" autocomplete="off" type="text" class="form-control" id="username">
+              <!-- input içerisi hata yakalama işlemi -->
+              <span class="error"
+              *ngIf="loginForm.get('username') && !loginForm.get('username')!.valid && loginForm.get('username')!.touched"
+              >Username is required</span>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input formControlName="password" autocomplete="off" type="password" class="form-control" id="psw">
+              <!-- input içerisi hata yakalama işlemi -->
+              <span class="error"
+              *ngIf="loginForm.get('password') && !loginForm.get('password')!.valid && loginForm.get('password')!.touched"
+              >Password is required</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Log in</button>
+            <a (click)="singUp()" style="cursor: pointer;">Create Account</a>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- signup sayfası -->
+  <div class="container" *ngIf="isSignUp" >
+
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="temp" style="top:10%">
+            <div class="text-center">
+              <h3 class="strong">Sign Up</h3>
+            </div>
+            <!-- signup formu -->
+            <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input autocomplete="off" formControlName="username" type="text" class="form-control" id="username">
+                <!-- input içerisi hata yakalama işlemi -->
+                <span class="error"
+                *ngIf="signupForm.get('username') && !signupForm.get('username')!.valid && signupForm.get('username')!.touched"
+                >Username is required</span>
+              </div>
+              <div class="mb-3">
+                <label for="firstname" class="form-label">First Name</label>
+                <input autocomplete="off" formControlName="firstname" type="text" class="form-control" id="firstname">
+                <!-- input içerisi hata yakalama işlemi -->
+                <span class="error"
+                *ngIf="signupForm.get('firstname') && !signupForm.get('firstname')!.valid && signupForm.get('firstname')!.touched"
+                >Firsname is required</span>
+              </div>
+              <div class="mb-3">
+                <label for="lastname" class="form-label">Last Name</label>
+                <input autocomplete="off" formControlName="lastname" type="text" class="form-control" id="lastname">
+                <!-- input içerisi hata yakalama işlemi -->
+                <span class="error"
+                *ngIf="signupForm.get('lastname') && !signupForm.get('lastname')!.valid && signupForm.get('lastname')!.touched"
+                >Lastname is required</span>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input autocomplete="off" formControlName="phone" type="number" class="form-control" id="phone">
+                <!-- input içerisi hata yakalama işlemi -->
+                <span class="error"
+                *ngIf="signupForm.get('phone') && !signupForm.get('phone')!.valid && signupForm.get('phone')!.touched"
+                >Phone number is required</span>
+              </div>
+
+              <div class="mb-3">
+                <label for="genre" class="form-label">Genre</label>
+                <select class="form-select" formControlName="genre" aria-label="Default select example">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <!-- input içerisi hata yakalama işlemi -->
+                <span class="error"
+                *ngIf="signupForm.get('genre') && !signupForm.get('genre')!.valid && signupForm.get('genre')!.touched"
+                >Genre is not selected</span>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input autocomplete="off" formControlName="email" type="email" class="form-control" id="email">
+                <!-- input içerisi hata yakalama işlemi -->
+                <span class="error"
+                *ngIf="signupForm.get('email') && !signupForm.get('email')!.valid && signupForm.get('email')!.touched"
+                >Email is not correct</span>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input autocomplete="off" formControlName="password" type="password" class="form-control" id="password">
+                <!-- input içerisi hata yakalama işlemi -->
+                <span class="error"
+                *ngIf="signupForm.get('password') && !signupForm.get('password')!.valid && signupForm.get('password')!.touched"
+                >Password is required</span>
+              </div>
+
+
+              <button type="submit" class="btn btn-primary">Sign up</button>
+              <a (click)="signIn()" style="cursor: pointer;" href="#">I have an account, login.</a>
+            </form>
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+

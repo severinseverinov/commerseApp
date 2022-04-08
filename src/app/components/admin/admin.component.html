@@ -1,0 +1,36 @@
+<!-- admin navigasyon barı -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light top-fixed">
+  <div class="container-fluid p-2 m-2 ps-5">
+    <img src="../assets/siteImgs/onlineMall.png" alt="Online Mall" srcset="" style="margin-right:20px;" (click)="gotoMain()">
+    <ul class="navbar-nav ms-auto  mb-2 pe-5 mb-lg-0">
+      <li class="nav-item">
+        <a routerLink="/admin/adminMain/products" style="cursor:pointer;" class="nav-link active">Product Operations</a>
+      </li>
+    </ul>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav ms-auto  mb-2 pe-5 mb-lg-0">
+        <li class="nav-item">
+          <a (click)="logout()" style="cursor:pointer;" class="nav-link active"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!-- product talosu -->
+<div class="container mt-3">
+  <div class="card-table">
+      <div class="cart-product">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+

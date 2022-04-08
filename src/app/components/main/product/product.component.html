@@ -1,0 +1,49 @@
+<!-- navbar component -->
+<app-navbar></app-navbar>
+
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4" id="images">
+      <img class="img-thumbnail" style="height: 500px;" src="{{product.image}}" alt="" srcset="">
+    </div>
+    <div class="col-8">
+
+        <h5 >{{product.title}}</h5>
+        <p >{{product.description}}</p>
+        <p ><strong>Price:</strong> {{product.price}}<li class="fas fa-turkish-lira-sign ps-1"></li></p>
+        <button class="btn btn-primary mb-4" (click)="addToChart(product)" >Add <i class="fa-solid fa-cart-plus"></i></button>
+
+        <!-- ürüne göre yoruların gösterilmesi -->
+        <h5 >Product Reviews</h5>
+        <ng-container  *ngFor="let post of posts" >
+          <ng-container *ngIf="post.porductId==product.productId">
+            <h5 >{{post.postTitle}}</h5>
+          <p >{{post.post}}</p>
+          <p >Rate : {{post.rate}}/5</p>
+          </ng-container>
+        </ng-container>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">© 2022 Online Mall, Inc</p>
+
+    <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="../assets/siteImgs/onlineMall.png" alt="Online Mall" srcset="" style="" >
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
+</div>
+
+
