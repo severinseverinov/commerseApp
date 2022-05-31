@@ -12,31 +12,31 @@
 
 1. Register
 
-   ![Register](./projectImages/Signup.jpg)
+![Register](./projectImages/Signup.jpg)
 
 2. User login
 
-![userLogin](.\projectImages\userLogin.jpg)
+![userLogin](./projectImages/userLogin.jpg)
 
 3. Admin Login
 
-   ![adminLogin](.\projectImages\adminLogin.jpg)
+![adminLogin](./projectImages/adminLogin.jpg)
 
 4. Admin Panel
 
-   ![adminpanel](.\projectImages\adminPanel2.jpg)
+![adminpanel](./projectImages/adminPanel2.jpg)
 
 5. New Product
 
-   ![newProduct](.\projectImages\newProduct.jpg)
+![newProduct](./projectImages/newProduct.jpg)
 
 6. Edit Product
 
-   ![editProduct](.\projectImages\adminEdit.jpg)
+![editProduct](./projectImages/adminEdit.jpg)
 
 7. Main Page
 
-   ![main1](./projectImages/main1.jpg)
+![main1](./projectImages/main1.jpg)
 
 ![main2](./projectImages/main2.jpg)
 
