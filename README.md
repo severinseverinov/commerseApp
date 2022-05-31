@@ -12,7 +12,7 @@
 
 1. Register
 
-   ![Register](.\projectImages\Signup.jpg)
+   ![Register](./projectImages/Signup.jpg)
 
 2. User login
 
@@ -36,20 +36,20 @@
 
 7. Main Page
 
-   ![main1](.\projectImages\main1.jpg)
+   ![main1](./projectImages/main1.jpg)
 
-![main2](.\projectImages\main2.jpg)
+![main2](./projectImages/main2.jpg)
 
 8. Product
-![product](.\projectImages\product.jpg)
+![product](./projectImages/product.jpg)
 
 9. Cart
 
-![cart](.\projectImages\cart.jpg)
+![cart](./projectImages/cart.jpg)
 
 10. Buy
 
-![buy](.\projectImages\buy.jpg)
+![buy](./projectImages/buy.jpg)
 
 #### Packages And Modules
 
